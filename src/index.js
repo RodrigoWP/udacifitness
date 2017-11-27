@@ -1,11 +1,10 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
+import { AddEntry } from './components'
 
-export default UdaciFitness = () => (
+export default () => (
   <View style={styles.container}>
-    <Text style={styles.text}>
-      UdaciFitnes
-    </Text>
+    <AddEntry />
   </View>
 )
 
@@ -14,9 +13,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 40
+    justifyContent: 'center'
   }
 })
