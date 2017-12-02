@@ -1,9 +1,14 @@
 import React from 'react'
 import { View } from 'react-native'
-import { AddEntry } from './components'
+import AddEntry from './components/add-entry'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './reducers'
 
 export default () => (
-  <View>
-    <AddEntry />
-  </View>
+  <Provider store={createStore(reducer)}>
+    <View>
+      <AddEntry />
+    </View>
+  </Provider>
 )
