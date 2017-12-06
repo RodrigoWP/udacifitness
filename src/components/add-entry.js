@@ -3,7 +3,8 @@ import { ScrollView, View, TouchableOpacity, Text, StyleSheet, Platform } from '
 import {
   getMetricMetaInfo,
   timeToString,
-  getDailyReminderValue
+  getDailyReminderValue,
+  setLocalNotification
 } from '../utils/helpers'
 import UdaciSlider from './udaci-slider'
 import UdaciSteppers from './udaci-steppers'
@@ -49,7 +50,8 @@ class AddEntry extends Component {
 
     submitEntry({ key, entry })
 
-    // Clear local notification
+    clearLocalNotification()
+      .then(setLocalNotification)
   }
 
   increment = (metric) => {
